@@ -2,7 +2,26 @@ Repozytorium - pliki projektu + historia zmian
 Repozytoria - zdalne, lokalne, 
 Snapshot - migawka z aktualnego stanu projektu zapisywana w repozytorium komendą commit
 
+Komendy konsoli
+mkdir nazwa - tworzy katalog o nazwie nazwa
+edycja pliku: code .\about.html  //otwiera w VS Code
+            notepad .\about.html    // otwiera w notatniku
+echo "Przyklad" >> about.html       //tworzy plik about a w nim słowo: Przyklad
+W Git-bush nie powershell! można tworzyć pliki :
+    >> plik.txt
+ale też
+    > plik2.txt //z jednym nawiasem nie chroni przed nadpisaniem
+rm plik.txt kasuje plik
+rm *.html //kasuje wszystkie pliki html
 
+
+Otwieranie konsoli ctrl + ~
+                    ctrl + j 
+
+VS Code
+zmiana defoltowej scieżki:
+File -> Preferences -> Settings
+terminal.integrated.cwd
 
 git commit -a -m "" -zapisanie w repozytorium stan plików
 komenda commit robi obiekt kommit i obiet tree, snapshot jest wskazaniem na oba elementy(jest też synonimem commitu, commit robi snapshot)
