@@ -47,4 +47,6 @@ lub dla jednego pliku
 git add .\git_komendy.txt
 git commit -m "Dodatek" 
 git push -u origin master 
-bla bla bla 
+
+wykasowanie przykładowych danych logowania
+git config --global --unset  user.email
