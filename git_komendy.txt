@@ -1,0 +1,20 @@
+Repozytorium - pliki projektu + historia zmian
+Repozytoria - zdalne, lokalne, 
+Snapshot - migawka z aktualnego stanu projektu zapisywana w repozytorium komendą commit
+
+
+
+git commit -a -m "" -zapisanie w repozytorium stan plików
+komenda commit robi obiekt kommit i obiet tree, snapshot jest wskazaniem na oba elementy(jest też synonimem commitu, commit robi snapshot)
+staging area - poczekalnia, przechowuje pliki dodane 'add' 
+git repository - przechowuje obiekty stworzone przez gita
+droga:
+katalog roboczy -> git add -a -> poczekalnia -> git commit -> repozytorium
+
+Kod gotowy do wstawienia na serwer:
+cd existing-project
+git init
+git add --all
+git commit -m "Initial Commit"
+git remote add origin http://kwisniewski@bitbucket.radwag.net:7990/scm/prvnlis/demorepository.git
+git push -u origin master
