@@ -37,3 +37,13 @@ git add --all
 git commit -m "Initial Commit"
 git remote add origin http://kwisniewski@bitbucket.radwag.net:7990/scm/prvnlis/demorepository.git
 git push -u origin master
+
+Żeby wysłać już wielokrotnie dodawany katalog:
+git add --all
+git commit -m "Troche polecen"
+git push -u origin master 
+
+lub dla jednego pliku 
+git add .\git_komendy.txt
+git commit -m "Dodatek" 
+git push -u origin master 
