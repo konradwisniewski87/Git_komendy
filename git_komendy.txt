@@ -14,6 +14,7 @@ ale też
     > plik2.txt //z jednym nawiasem nie chroni przed nadpisaniem
 rm plik.txt kasuje plik
 rm *.html //kasuje wszystkie pliki html
+ rm -force .\udp2raw-tunnel\ //usuwa katalog ze wszystkimi plikami także ukrytymi
 
 
 Otwieranie konsoli ctrl + ~
