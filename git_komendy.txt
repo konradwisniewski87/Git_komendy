@@ -6,6 +6,7 @@ Komendy konsoli
 mkdir nazwa - tworzy katalog o nazwie nazwa
 edycja pliku: code .\about.html  //otwiera w VS Code
             notepad .\about.html    // otwiera w notatniku
+podejzenie pliku: cat git_komendy.txt
 echo "Przyklad" >> about.html       //tworzy plik about a w nim słowo: Przyklad
 W Git-bush nie powershell! można tworzyć pliki :
     >> plik.txt
