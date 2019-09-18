@@ -38,6 +38,8 @@ dodanie plików:
     git add --all
 git diff //od difference porównuje plik z ostatniego commitu z tym co jest w katalogu roboczym
     linia zmieniana jest pokazywana jako usunieta plus na jej miejsce nowa linia
+git mv stage.txt stage2.txt zmiana nazwy fizycznej pliku na dysku i w git z stage na stage2
+
 
 4 stany pliku w repozytorium:
     -plik nieśledzony
@@ -45,7 +47,7 @@ git diff //od difference porównuje plik z ostatniego commitu z tym co jest w ka
     -śledzony zmodyfikowany
     -śledzony w indeksie(w stage, przechowalni)
 
-Git checkout plik.txt //przywraca plik że stage area
+Git checkout -- plik.txt //przywraca plik że stage area
 
 Szybkie podejzenie log:
 git log --oneline
