@@ -24,27 +24,32 @@ zmiana defoltowej scieżki:
 File -> Preferences -> Settings
 terminal.integrated.cwd
 
-git commit -a -m "" -zapisanie w repozytorium stan plików
+git commit -m "co sie zmieniło" -zapisanie w repozytorium stan plików
+git commit -a -m "co sie zmieniło" -zapisanie w repozytorium stan plików wszystkich śledzonych(-a), a nie tylko tych w stage
+git commit "co sie zmieniło" -zapisanie w repozytorium ale dla message otworzy się notatnik aby wpisać zmianę
 komenda commit robi obiekt kommit i obiet tree, snapshot jest wskazaniem na oba elementy(jest też synonimem commitu, commit robi snapshot)
 staging area - poczekalnia, przechowuje pliki dodane 'add' 
 git repository - przechowuje obiekty stworzone przez gita
 droga plików:
 katalog roboczy -> git add -a -> poczekalnia -> git commit -> repozytorium
 dodanie plików:
-git add . //dodaje caly folder
-git add -A 
-git add --all
+    git add . //dodaje caly folder
+    git add -A 
+    git add --all
+git diff //od difference porównuje plik z ostatniego commitu z tym co jest w katalogu roboczym
+    linia zmieniana jest pokazywana jako usunieta plus na jej miejsce nowa linia
 
 4 stany pliku w repozytorium:
--plik nieśledzony
--śledzony niezmodyfikowany
--śledzony zmodyfikowany
--śledzony w indeksie(w stage, przechowalni)
+    -plik nieśledzony
+    -śledzony niezmodyfikowany
+    -śledzony zmodyfikowany
+    -śledzony w indeksie(w stage, przechowalni)
 
 Git checkout plik.txt //przywraca plik że stage area
 
 Szybkie podejzenie log:
 git log --oneline
+
 
 Kod gotowy do wstawienia na serwer:
 cd existing-project
