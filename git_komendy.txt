@@ -28,8 +28,19 @@ git commit -a -m "" -zapisanie w repozytorium stan plików
 komenda commit robi obiekt kommit i obiet tree, snapshot jest wskazaniem na oba elementy(jest też synonimem commitu, commit robi snapshot)
 staging area - poczekalnia, przechowuje pliki dodane 'add' 
 git repository - przechowuje obiekty stworzone przez gita
-droga:
+droga plików:
 katalog roboczy -> git add -a -> poczekalnia -> git commit -> repozytorium
+
+4 stany pliku w repozytorium:
+-plik nieśledzony
+-śledzony niezmodyfikowany
+-śledzony zmodyfikowany
+-śledzony w indeksie(w stage, przechowalni)
+
+Git checkout plik.txt //przywraca plik że stage area
+
+Szybkie podejzenie log:
+git log --oneline
 
 Kod gotowy do wstawienia na serwer:
 cd existing-project
