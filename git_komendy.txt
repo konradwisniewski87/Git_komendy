@@ -6,7 +6,7 @@ Komendy konsoli
 mkdir nazwa - tworzy katalog o nazwie nazwa
 edycja pliku: code .\about.html  //otwiera w VS Code
             notepad .\about.html    // otwiera w notatniku
-podejzenie pliku: cat git_komendy.txt
+podejzenie pliku w konsoli: cat git_komendy.txt
 echo "Przyklad" >> about.html       //tworzy plik about a w nim słowo: Przyklad
 W Git-bush nie powershell! można tworzyć pliki :
     >> plik.txt
@@ -30,6 +30,10 @@ staging area - poczekalnia, przechowuje pliki dodane 'add'
 git repository - przechowuje obiekty stworzone przez gita
 droga plików:
 katalog roboczy -> git add -a -> poczekalnia -> git commit -> repozytorium
+dodanie plików:
+git add . //dodaje caly folder
+git add -A 
+git add --all
 
 4 stany pliku w repozytorium:
 -plik nieśledzony
