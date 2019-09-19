@@ -37,6 +37,8 @@ dodanie plików:
     git add . //dodaje caly folder
     git add -A 
     git add --all
+    haczyk git add, jeśli dodasz plik(git add), zmodyfikujesz ten plik(code plik) i zrobisz komita to na serwer trafią
+    zmiany z momentu git add a nie momentu robienia komita,
 git diff //od difference porównuje plik z ostatniego commitu z tym co jest w katalogu roboczym
     linia zmieniana jest pokazywana jako usunieta plus na jej miejsce nowa linia
 git mv stage.txt stage2.txt zmiana nazwy fizycznej pliku na dysku i w git z stage na stage2
