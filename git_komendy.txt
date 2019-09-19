@@ -40,8 +40,9 @@ dodanie plików:
 git diff //od difference porównuje plik z ostatniego commitu z tym co jest w katalogu roboczym
     linia zmieniana jest pokazywana jako usunieta plus na jej miejsce nowa linia
 git mv stage.txt stage2.txt zmiana nazwy fizycznej pliku na dysku i w git z stage na stage2
-
-
+.gitignore jak nie dziala to https://stackoverflow.com/questions/3833561/why-doesnt-git-ignore-my-specified-file
+    swoj problem rozwiazalem przez przekopowanie plku z PMC32 i z ianę zawartości w notatniku
+    obydwa były rozpoznawane przez VS code z symbolem gita ale jednak ten pierwszy nie działał
 4 stany pliku w repozytorium:
     -plik nieśledzony
     -śledzony niezmodyfikowany
@@ -52,6 +53,17 @@ Git checkout -- plik.txt //przywraca plik że stage area
 
 Szybkie podejzenie log:
 git log --oneline
+
+git cat-file -p nazwa folderu(dwie cyfry)plus nazwa pliku(38 cyfr)  //pokazuje co się zmieniło w pliku ale dla wersji 23 coś poszło nie tak;p
+    git cat-file -p 0acadae1d1643c276bfeb60f8fb15d1885a129d3
+
+git cat-file -t nazwa folderu(dwie cyfry)plus nazwa pliku(38 cyfr)  //pokazuje drzewo
+    może odwołać się do tree czyli do drzewa(innego pliku)
+    może do commit np. jak dodaliśmy plik 
+jeśli stworzymy dwa pliki z taką samą zawartościa to w folderze objects nic się nie zmieni, bo git tworzy obiekty dla treści a nie plików, dalej plik będzie widziany w stage
+
+git hash-object nazwaPliku.txt // podajenumer 40 cyfrowy pliku, ale nie zmiany(o której mowa u góry)
+
 
 
 Kod gotowy do wstawienia na serwer:
