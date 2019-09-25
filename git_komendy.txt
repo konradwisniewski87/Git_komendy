@@ -39,14 +39,17 @@ dodanie plików:
     git add --all
     haczyk git add, jeśli dodasz plik(git add), zmodyfikujesz ten plik(code plik) i zrobisz komita to na serwer trafią
     zmiany z momentu git add a nie momentu robienia komita,
+    git add -p //wybieramy czy dodajemy zmiane do commita
 git diff //od difference porównuje plik z ostatniego commitu z tym co jest w katalogu roboczym
     linia zmieniana jest pokazywana jako usunieta plus na jej miejsce nowa linia
+    g
 git mv stage.txt stage2.txt zmiana nazwy fizycznej pliku na dysku i w git z stage na stage2
 .gitignore jak nie dziala to https://stackoverflow.com/questions/3833561/why-doesnt-git-ignore-my-specified-file
     swoj problem rozwiazalem przez przekopowanie plku z PMC32 i z ianę zawartości w notatniku
     obydwa były rozpoznawane przez VS code z symbolem gita ale jednak ten pierwszy nie działał
 4 stany pliku w repozytorium:
     -plik nieśledzony
+    j
     -śledzony niezmodyfikowany
     -śledzony zmodyfikowany
     -śledzony w indeksie(w stage, przechowalni)
