@@ -24,7 +24,7 @@ VS Code
 zmiana defoltowej scieżki:
 File -> Preferences -> Settings
 terminal.integrated.cwd
-
+//lol
 git commit -m "co sie zmieniło" -zapisanie w repozytorium stan plików
 git commit -a -m "co sie zmieniło" -zapisanie w repozytorium stan plików wszystkich śledzonych(-a), a nie tylko tych w stage
 git commit "co sie zmieniło" -zapisanie w repozytorium ale dla message otworzy się notatnik aby wpisać zmianę
