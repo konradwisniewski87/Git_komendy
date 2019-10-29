@@ -14,8 +14,7 @@ ale też
     > plik2.txt //z jednym nawiasem nie chroni przed nadpisaniem
 rm plik.txt kasuje plik
 rm *.html //kasuje wszystkie pliki html
- rm -force .\udp2raw-tunnel\ //usuwa katalog ze wszystkimi plikami także ukrytymi
-
+rm -force .\udp2raw-tunnel\ //usuwa katalog ze wszystkimi plikami także ukrytymi
 
 Otwieranie konsoli ctrl + ~
                     ctrl + j 
@@ -24,7 +23,7 @@ VS Code
 zmiana defoltowej scieżki:
 File -> Preferences -> Settings
 terminal.integrated.cwd
-//lol
+
 git commit -m "co sie zmieniło" -zapisanie w repozytorium stan plików
 git commit -a -m "co sie zmieniło" -zapisanie w repozytorium stan plików wszystkich śledzonych(-a), a nie tylko tych w stage
 git commit "co sie zmieniło" -zapisanie w repozytorium ale dla message otworzy się notatnik aby wpisać zmianę
@@ -42,14 +41,12 @@ dodanie plików:
     git add -p //wybieramy czy dodajemy zmiane do commita
 git diff //od difference porównuje plik z ostatniego commitu z tym co jest w katalogu roboczym
     linia zmieniana jest pokazywana jako usunieta plus na jej miejsce nowa linia
-    g
 git mv stage.txt stage2.txt zmiana nazwy fizycznej pliku na dysku i w git z stage na stage2
 .gitignore jak nie dziala to https://stackoverflow.com/questions/3833561/why-doesnt-git-ignore-my-specified-file
     swoj problem rozwiazalem przez przekopowanie plku z PMC32 i z ianę zawartości w notatniku
     obydwa były rozpoznawane przez VS code z symbolem gita ale jednak ten pierwszy nie działał
 4 stany pliku w repozytorium:
     -plik nieśledzony
-    j
     -śledzony niezmodyfikowany
     -śledzony zmodyfikowany
     -śledzony w indeksie(w stage, przechowalni)
