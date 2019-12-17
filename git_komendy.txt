@@ -66,6 +66,7 @@ jeśli stworzymy dwa pliki z taką samą zawartościa to w folderze objects nic 
 
 git hash-object nazwaPliku.txt // podajenumer 40 cyfrowy pliku, ale nie zmiany(o której mowa u góry)
 
+jeśli wrzucisz link do pliku w filderze git, to bedzie śledził link ale nie zawartość pliku
 
 
 Kod gotowy do wstawienia na serwer:
@@ -88,3 +89,11 @@ git push -u origin master
 
 wykasowanie przykładowych danych logowania
 git config --global --unset  user.email
+
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+
+
+
+
+
