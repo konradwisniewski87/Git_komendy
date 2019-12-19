@@ -118,4 +118,11 @@ Podmiana zdalnego repozytorium, chciałem przejść z radwagowego bitbucket na p
 Nie działa:
     git remote add origin https://github.com/konradwisniewski87/Git_komendy.git 
     fatal: remote origin already exists.
-Działa: git remote set-url https://github.com/konradwisniewski87/Git_komendy.git
+Działa: git remote set-url origin https://github.com/konradwisniewski87/Git_komendy.git
+sprawdzenie adresu:
+    git remote -v
+    albo:
+    git remote get-url --push origin
+Wypchniecie repozytorium: 
+    git push -u origin master
+    sa wszystkie komity
