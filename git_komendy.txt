@@ -93,7 +93,29 @@ git config --global --unset  user.email
 git config --global user.name "FIRST_NAME LAST_NAME"
 git config --global user.email "MY_NAME@example.com"
 
+//-----------------------------------Inzynierka
+git init
+git config --local user.name "Konrad Wisniewski"
+git config --local user.email konrad.wisniewski87@gmail.com
+git remote add origin https://wisniewski87@bitbucket.org/wisniewski87/quadrokopter.git
+git pull
+git add --all
+git commit -m "Pierwszy kommit"
+git push -u origin master
+//-----------------------------Wywaliła błąd
+To https://bitbucket.org/wisniewski87/quadrokopter.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://wisniewski87@bitbucket.org/wisniewski87/quadrokopter.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
+jak nie po dobroci to:
+git push --force
 
-
-
+Podmiana zdalnego repozytorium, chciałem przejść z radwagowego bitbucket na prywatny git hub
+Nie działa:
+    git remote add origin https://github.com/konradwisniewski87/Git_komendy.git 
+    fatal: remote origin already exists.
+Działa: git remote set-url https://github.com/konradwisniewski87/Git_komendy.git
