@@ -126,3 +126,6 @@ sprawdzenie adresu:
 Wypchniecie repozytorium: 
     git push -u origin master
     sa wszystkie komity
+Scalanie galezi branch, przechodzimy na mester i do niej mergujemy branch test:
+     git checkout master
+     git merge test 
