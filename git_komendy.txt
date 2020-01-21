@@ -129,3 +129,17 @@ Wypchniecie repozytorium:
 Scalanie galezi branch, przechodzimy na mester i do niej mergujemy branch test:
      git checkout master
      git merge test 
+
+Pobranie wszystkich zmian ze zdalnego repozytorium(chyba na wszystkich gałęziach)//https://stackoverflow.com/questions/21651185/git-merge-a-remote-branch-locally
+git fetch --all
+
+Jak mam zmiany i chce scalić w przód nie tracąc ich
+git fetch --all
+git stash
+git pull
+git stash pop   //stash -> stos
+
+Sprawdzanie repozytorium zdalnego i lokalnego jako graf
+git log --oneline --graph --all  
+
+git pull -> to jest fetch i merge w jednym
