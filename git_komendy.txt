@@ -1,3 +1,4 @@
+//C:\Users\USER\Atollic\TrueSTUDIO\STM32_workspace_9.3\Git_komendy
 Repozytorium - pliki projektu + historia zmian
 Repozytoria - zdalne, lokalne, 
 Snapshot - migawka z aktualnego stanu projektu zapisywana w repozytorium komendą commit
