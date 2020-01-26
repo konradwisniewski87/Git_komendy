@@ -143,4 +143,19 @@ git stash pop   //stash -> stos
 Sprawdzanie repozytorium zdalnego i lokalnego jako graf
 git log --oneline --graph --all  
 
+<<<<<<< Updated upstream
 git pull -> to jest fetch i merge w jednym
+=======
+git pull -> to jest fetch i merge w jednym
+
+jak wyswietla tylko lokane zmiany to wpisujemy 
+git log origin --oneline
+
+
+łączenie gałęzi:
+git chckout master
+git merge develop 
+
+zmniany w repozytorium:
+git commit ----amend
+>>>>>>> Stashed changes
