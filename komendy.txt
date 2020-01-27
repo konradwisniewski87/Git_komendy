@@ -94,6 +94,8 @@ git config --global --unset  user.email
 git config --global user.name "FIRST_NAME LAST_NAME"
 git config --global user.email "MY_NAME@example.com"
 
+git clone //klonuje projek to folderu, ustawia twoją lokalną gałąź główną master tak aby śledziła zmiany w zdalnej gałęzi master na serwerze z którego sklonowałeś repozytorium
+
 //-----------------------------------Inzynierka
 git init
 git config --local user.name "Konrad Wisniewski"
@@ -143,9 +145,6 @@ git stash pop   //stash -> stos
 Sprawdzanie repozytorium zdalnego i lokalnego jako graf
 git log --oneline --graph --all  
 
-<<<<<<< Updated upstream
-git pull -> to jest fetch i merge w jednym
-
 jak wyswietla tylko lokane zmiany to wpisujemy 
 git log origin --oneline
 
@@ -154,9 +153,6 @@ git log origin --oneline
 git chckout master
 git merge develop 
 
-zmniany w repozytorium:
-git commit --amend
-
 git log -p -2 //-p pokazuje różnice wprowadzone z każdą rewizją;-2 aby ograniczyć zbiór do dwóch ostatnich wpisów
 git log --stat // skrócone statystyki każdej z zatwierdzonych zmian
 git log --pretty=oneline
@@ -164,6 +160,14 @@ git log --pretty=oneline
     --pretty=full
     --pretty=fuller
     --oneline
+    --author
+    --grep //słowach kluczowych zawartych w notkach zmian
+    --all-match //jeżeli potrzebujesz określić zarówno autora jak i słowa kluczowe, musisz dodać opcję --all-match - w przeciwnym razie polecenie dopasuje jedynie wg jednego z kryteriów
+    --since
+    -S  //rewizje w których dodano lub usunięto ten ciąg, np funkcje
+git log --since=2.weeks //zmiany z 2 tygodni
+git log -Sfunction_nam
+
 git log --pretty=format:"%h - %an, %ar : %s"
     %H hash commita
     %h skrócony hash commita
@@ -180,3 +184,39 @@ git log --pretty=format:"%h - %an, %ar : %s"
     %cd Data zatwierdzającego zmiany
     %cr Data zatwierdzającego zmiany, względna
     %s Wiadomość
+
+git mv .\git_komendy.txt komendy.txt //zmiana nazwy śledzonego pliku
+
+//Cofanie zmian 
+zmniany w repozytorium:
+git commit -m 'initial commit' //comit w którym czegoś brakowało
+git add forgotten_file
+git commit --amend //Polecenie bierze zawartość poczekalni i zatwierdza jako dodatkowe zmiany. Jeśli niczego nie zmieniłeś od ostatniej rewizji
+git reset HEAD //przenosi wszystko z add(poczekalni) do lokalnego, tak jakby nie było add
+
+git checkout -- pc.cpp //przywraca oryginalny plik komita, wywala nasze zmiany
+git checkout 388bee7 -- pc.cpp
+git checkout master -- pc.cpp //przywraca z innej gałęzi
+
+Praca ze zdalnym repozytorium
+git remote //pokazuje serwery, jeśli projekt robiony przez colone to bedzie orygin
+git remote -v //pokazuje adresy URL serwera
+//można to samo repozytorium przechowywać na kilku serwerach
+git remote add [skrót] [url]
+git remote add pb https://github.com/paulboone/ticgit
+git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+pb	https://github.com/paulboone/ticgit (fetch)
+pb	https://github.com/paulboone/ticgit (push)
+git fetch pb //aby uzyskać dane ze zdalnego projektu i wszystkie zdalne gałęzie
+git fetch origin 
+
+git pull --> git fetch + git merge 
+
+//wysłanie do zdalnego repozytorium
+git push [nazwa-zdalnego-repo] [nazwa-gałęzi]
+git push origin master
+git push pb master
+
+jeśli nie da się wypchnąć zmian bo "rejected" to pobierz to co jest na serwerze --> git pull
