@@ -145,8 +145,6 @@ git log --oneline --graph --all
 
 <<<<<<< Updated upstream
 git pull -> to jest fetch i merge w jednym
-=======
-git pull -> to jest fetch i merge w jednym
 
 jak wyswietla tylko lokane zmiany to wpisujemy 
 git log origin --oneline
@@ -157,5 +155,28 @@ git chckout master
 git merge develop 
 
 zmniany w repozytorium:
-git commit ----amend
->>>>>>> Stashed changes
+git commit --amend
+
+git log -p -2 //-p pokazuje różnice wprowadzone z każdą rewizją;-2 aby ograniczyć zbiór do dwóch ostatnich wpisów
+git log --stat // skrócone statystyki każdej z zatwierdzonych zmian
+git log --pretty=oneline
+    --pretty=short
+    --pretty=full
+    --pretty=fuller
+    --oneline
+git log --pretty=format:"%h - %an, %ar : %s"
+    %H hash commita
+    %h skrócony hash commita
+    %T hash drzewa
+    %t skrócony hash drzewa
+    %P hash commita nadrzędnego
+    %p skrócony hash commita nadrzędnego
+    %an Nazwa autora
+    %ae E-mail autora
+    %ad Data autora (odnosi się do --date=option)
+    %ar Data autora, względna
+    %cn Nazwa zatwierdzającego zmiany
+    %ce E-mail zatwierdzającego zmiany
+    %cd Data zatwierdzającego zmiany
+    %cr Data zatwierdzającego zmiany, względna
+    %s Wiadomość
