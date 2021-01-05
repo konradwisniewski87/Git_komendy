@@ -116,6 +116,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 jak nie po dobroci to:
 git push --force
+ale lepiej było zrobić pull i dopiero push
 
 Podmiana zdalnego repozytorium, chciałem przejść z radwagowego bitbucket na prywatny git hub
 Nie działa:
@@ -220,3 +221,53 @@ git push origin master
 git push pb master
 
 jeśli nie da się wypchnąć zmian bo "rejected" to pobierz to co jest na serwerze --> git pull
+
+ git remote show [nazwa-zdalnego-repo]
+ git remote show origin
+
+git remote rename pb paul
+git remote
+odpowiedz:
+origin
+paul
+//zmieniane nazwy dotycz lokalnych i zdalnych gałęzi
+
+
+Tagowanie git tag
+git tag //wyświetlenie dostępnych tagów
+git tag -l 'v1*' //wyświetlenie dostępnych tagów zaczynajacego sie od v1
+
+git tag -a v1.4 -m 'my version 1.4' //-a tworzy etykietę opisaną(tag) v1.4   -m to notka etykiety jak się jej nie wpisze to wyskoczy notatnik do wisania jak przy commicie, do etykiety dodane jest kto tworzy
+git show //dane etykiety wraz z tagową rewizją
+-a -s -m opisują etykietę opisaną
+etykiety lekkie(bez daty, kto tworzy i email)
+git tag v1.4-lw toworz
+git show v1.4 pokazuje dane o tym commicie
+
+Możesz także etykietować historyczne rewizje.
+git tag -a v1.2 9fceb02
+
+git push origin [nazwa-etykiety] //wysyla konkretną etykiete na serwer, git push tego nie robi
+git push origin --tags //wysyla wszystkie etykiety na serwer
+git clone //klonuje także etykiety
+
+Zmiana nazwy gałęzi, jeśli jesteś na niej:
+git branch -m new-name
+jeśli jesteś na innej gałęzi:
+git branch -m old-name new-name
+Wywalenie strej gałęzi z serwera i wsadzenie nowej
+git push origin :old-name new-name
+
+Wysłanie wszystkich gałęzi na zdalne repo:
+git push --all origin
+
+Ziana zdalnej gałezi do wypychania
+git pull origin other-branch
+
+git branch -a // pokazjuje zdalne i lokalne
+git branch -r // pokazuje zdalne gałęzie remote
+git branch //lokalne gałęzie
+
+wklejenie do git bush shift + insert
+
+git checkout 9574894a21741546621cfaa95e897c27d6f97132   //pzrechodzi to starego commita o numerze 9574894a21741546621cfaa95e897c27d6f97132   
