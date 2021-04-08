@@ -1,2 +1,4 @@
 ignorowany.txt
 TestIgnore
+TestIgnore2
+!TestIgnore2/4.txt
